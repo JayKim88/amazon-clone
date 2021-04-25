@@ -1,10 +1,10 @@
 import React from 'react'
 import './Product.css'
-import {useStateValue} from './StateProvider'
+import { useStateValue } from './StateProvider'
 
 function Product({id, title, image, price, rating}) {
 
-  const [{basket}, dispatch] = useStateValue(); //state = {basket:Array(2)}
+  const [, dispatch] = useStateValue(); //state = {basket:Array(2)}
 
   const addToBasket = () =>{
     //dispatch the item into the data layer
@@ -30,7 +30,7 @@ function Product({id, title, image, price, rating}) {
         </p>
         <div className="product__rating">
           {Array(rating).fill().map((_, i)=>(
-            <p>🌟</p>
+            <p key={i}>🌟</p>
           ))} 
         </div>
       </div>
