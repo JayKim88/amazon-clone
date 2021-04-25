@@ -2,7 +2,6 @@ export const initialState = {
   basket: [],
   user: null
 }
-console.log(initialState.user)
 
 //Selector
 export const getBasketTotal = (basket) => 
