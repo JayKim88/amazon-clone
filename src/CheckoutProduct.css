@@ -2,10 +2,12 @@
   display: flex;
   margin-top: 20px;
   margin-bottom: 20px;
+  /* border: 1px solid red; */
 }
 
 .checkoutProduct__info {
   padding-left: 20px;
+  width: 70%;
 }
 
 .checkoutProduct__info > button {
