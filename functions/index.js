@@ -4,9 +4,7 @@ const express = require("express");
 const cors = require("cors");
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
-
 // API
-
 // App config
 const app = express();
 // Middlewares
@@ -29,7 +27,6 @@ app.post("/payments/create", async (req, res) => {
     clientSecret: paymentIntent.client_secret,
   });
 });
-
 
 // Listen command
 exports.api = functions.https.onRequest(app);
